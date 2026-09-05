@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pip --version)",
+      "Bash(npm --version)",
+      "Bash(git --version)",
+      "Bash(cmake --version)"
+    ]
+  }
+}

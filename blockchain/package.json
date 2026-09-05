@@ -1,0 +1,14 @@
+{
+  "name": "hhgoa-task3-blockchain",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Local Hardhat network + FaceVerify contract used by the hhgoa-task3 pipeline",
+  "scripts": {
+    "node": "hardhat node",
+    "compile": "hardhat compile",
+    "clean": "hardhat clean"
+  },
+  "devDependencies": {
+    "hardhat": "2.29.1"
+  }
+}

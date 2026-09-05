@@ -1,0 +1,30 @@
+# hhgoa-task3 -- Python dependencies
+#
+#   python -m pip install -r requirements.txt
+#
+# Every package here is free and open source. Nothing in this file requires an
+# account, a licence key or a paid tier. Versions are pinned to what this build
+# was verified against (Python 3.14, Windows 11); relax the pins if your
+# platform needs different wheels.
+
+# --- Stage 1: face detection + encoding (local, no API key, no network) ------
+insightface==1.0.1          # SCRFD detector + ArcFace R50 embeddings (ONNX)
+onnxruntime==1.24.4         # CPU inference backend for those ONNX models
+opencv-python==4.13.0.92    # image decode / crop
+numpy==2.4.0                # embedding maths
+# NOTE: face_recognition/dlib is deliberately NOT used -- see README,
+# "Which face model, and why".
+
+# --- Stage 2: reverse image search (Google Cloud Vision, Web Detection) -----
+requests==2.33.1            # the Vision REST call + matched-image download
+google-auth==2.57.1         # only for the GOOGLE_APPLICATION_CREDENTIALS path
+
+# --- Stage 3: blockchain anchor + independent re-verification ---------------
+web3==8.0.0                 # JSON-RPC client (local Hardhat, or any EVM chain)
+eth-utils==6.0.0            # keccak256, byte-identical to Solidity's keccak256
+
+# --- Shared ----------------------------------------------------------------
+python-dotenv==1.2.1        # reads .env so credentials never live in the source
+
+# --- Tests -----------------------------------------------------------------
+pytest==9.0.2

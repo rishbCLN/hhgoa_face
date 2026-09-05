@@ -1,0 +1,51 @@
+# --- Never commit these -------------------------------------------------------
+
+# Filled-in credentials. .env.example is the template that IS committed.
+.env
+
+# Face photos are biometric data. Bring your own at run time; keep it local.
+sample_data/*
+!sample_data/README.md
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.bmp
+
+# Service-account keys.
+*-sa.json
+service-account*.json
+
+
+# --- Build / run output -------------------------------------------------------
+
+# The fingerprint record: contains a matched URL and a face digest. Local only.
+fingerprint_record.json
+*_record.json
+
+# Written by blockchain/deploy.py; specific to your local chain, regenerate it.
+blockchain/deployment.json
+
+# Raw Vision API responses saved with --save-raw-search.
+*.vision.json
+
+# Hardhat
+blockchain/node_modules/
+blockchain/artifacts/
+blockchain/cache/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+*.egg-info/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
