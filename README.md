@@ -21,7 +21,6 @@ Web Detection API where that exact image appears online and filters the hits dow
 to a real social-media post URL. It downloads the matched image, re-encodes the
 face in it and scores the two vectors against a threshold; then it hashes the
 resulting match record and anchors that hash on a blockchain, and finally
-re-verifies the on-chain anchor against the local record from scratch — printing
 `MATCH` or `TAMPERED`.
 
 ```
